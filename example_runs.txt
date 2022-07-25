@@ -1,0 +1,216 @@
+java personfilter.Main nonexistent.json
+File nonexistent.json does not exist
+
+========================================================================
+
+java personfilter.Main invalid_format.json
+JSON file invalid_format.json is not of correct format or schema
+
+========================================================================
+
+java personfilter.Main invalid_schema.json
+Warn: firstName invalid in obj, skipping obj
+Warn: age invalid in obj, skipping obj
+Warn: firstName invalid in obj, skipping obj
+Warn: gender invalid in obj, skipping obj
+Warn: gender invalid in obj, skipping obj
+Warn: lastName invalid in obj, skipping obj
+Warn: lastName invalid in obj, skipping obj
+Filter by field (firstName, lastName, age, gender). Empty input to skip:
+firstName
+Value:
+Dewey
+Sort by field (firstName, lastName, age, gender). Empty input to skip:
+
+Results:
+
+First name: Dewey
+Last name: Duck
+Age: 85
+Gender: male
+
+Total: 1
+
+========================================================================
+
+java personfilter.Main input.json
+Filter by field (firstName, lastName, age, gender). Empty input to skip:
+lastName
+Value:
+Duck
+Sort by field (firstName, lastName, age, gender). Empty input to skip:
+age
+Ascending (y/n)?
+y
+
+Results:
+
+First name: Daisy
+Last name: Duck
+Age: 82
+Gender: female
+
+First name: Huey
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Dewey
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Louie
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Donald
+Last name: Duck
+Age: 86
+Gender: male
+
+First name: Donald
+Last name: Duck
+Age: 86
+Gender: male
+
+Total: 6
+
+========================================================================
+
+java personfilter.Main input.json
+Filter by field (firstName, lastName, age, gender). Empty input to skip: 
+age
+Operator (=, >, <, >=, <=):
+<
+Age:
+eighty
+Operand must be an integer
+80
+Sort by field (firstName, lastName, age, gender). Empty input to skip: 
+firstName
+Ascending (y/n)?
+y
+Results:
+
+First name: Eega
+Last name: Beeva
+Age: 75
+Gender: other
+
+First name: Gladstone
+Last name: Gander
+Age: 74
+Gender: male
+
+First name: Gyro
+Last name: Gearloose
+Age: 70
+Gender: male
+
+First name: Little
+Last name: Helper
+Age: 66
+Gender: other
+
+First name: Scrooge
+Last name: McDuck
+Age: 75
+Gender: male
+
+Total: 5
+
+========================================================================
+
+java personfilter.Main input.json
+Filter by field (firstName, lastName, age, gender). Empty input to skip:
+what
+Field must be one of firstName, lastName, age or gender or empty input
+
+Sort by field (firstName, lastName, age, gender). Empty input to skip:
+lol
+Field must be one of firstName, lastName, age or gender or empty input
+gender
+Ascending (y/n)?
+dunno
+Ascending (y/n)?
+n
+Results:
+
+First name: Little
+Last name: Helper
+Age: 66
+Gender: other
+
+First name: Eega
+Last name: Beeva
+Age: 75
+Gender: other
+
+First name: Donald
+Last name: Duck
+Age: 86
+Gender: male
+
+First name: Donald
+Last name: Duck
+Age: 86
+Gender: male
+
+First name: Scrooge
+Last name: McDuck
+Age: 75
+Gender: male
+
+First name: Mickey
+Last name: Mouse
+Age: 93
+Gender: male
+
+First name: Gyro
+Last name: Gearloose
+Age: 70
+Gender: male
+
+First name: Goofy
+Last name: Goof
+Age: 90
+Gender: male
+
+First name: Gladstone
+Last name: Gander
+Age: 74
+Gender: male
+
+First name: Huey
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Dewey
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Louie
+Last name: Duck
+Age: 85
+Gender: male
+
+First name: Daisy
+Last name: Duck
+Age: 82
+Gender: female
+
+First name: Minnie
+Last name: Mouse
+Age: 93
+Gender: female
+
+First name: Magica
+Last name: De Spell
+Age: 81
+Gender: female
+
+Total: 15
