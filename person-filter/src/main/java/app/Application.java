@@ -103,7 +103,7 @@ public class Application {
     }
 
     private static List<Person> filterAge(List<Person> personList, String operatorString, int intToFilter) {
-        switch(operatorString) {
+        switch (operatorString) {
             case "=":
                 return personList.stream().filter(x -> x.getAge() == intToFilter).collect(Collectors.toList());
             case ">":
@@ -121,9 +121,7 @@ public class Application {
 
     private static int getValidIntFromScanner(Scanner scanner, String question) {
         scanner.reset();
-        int answer = -1;
-
-        while(true) {
+        while (true) {
             System.out.println(question);
             try {
                 return Integer.parseInt(scanner.nextLine());

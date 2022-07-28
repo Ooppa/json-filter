@@ -48,9 +48,6 @@ class ApplicationTest {
             throw new TestAbortedException("The given list should contain at least 2 objects.");
         }
 
-        System.out.println("=========================== START ");
-        personList.forEach(x -> System.out.println(x));
-        System.out.println("=========================== END ");
         Assertions.assertEquals(firstPerson, personList.get(0));
         Assertions.assertEquals(lastPerson, personList.get(personList.size() - 1));
     }
@@ -99,7 +96,7 @@ class ApplicationTest {
     void filterByNothingOrderByLastNameAsc() {
         Scanner scanner = new Scanner(toStringWithLineSeparators("", "lastname", "y"));
         List<Person> personList = Application.runAndReturn(scanner, persons);
-        // If the first names are the same, we should order by the last name, if selected mode is filter by first name.
+        // If the last names are the same, we should order by the first name, if selected mode is filter by last name.
         assertOrder(JOEL_FISHER, LISA_SCHWARTZ, personList);
     }
 
@@ -107,7 +104,7 @@ class ApplicationTest {
     void filterByNothingOrderByLastNameDesc() {
         Scanner scanner = new Scanner(toStringWithLineSeparators("", "lastname", "n"));
         List<Person> personList = Application.runAndReturn(scanner, persons);
-        // If the first names are the same, we should order by the last name, if selected mode is filter by first name.
+        // If the last names are the same, we should order by the first name, if selected mode is filter by last name.
         assertOrder(LISA_SCHWARTZ, JOEL_FISHER, personList);
     }
 
@@ -115,7 +112,6 @@ class ApplicationTest {
     void filterByNothingOrderByGenderAsc() {
         Scanner scanner = new Scanner(toStringWithLineSeparators("", "gender", "y"));
         List<Person> personList = Application.runAndReturn(scanner, persons);
-        System.out.println("-- gender, y");
 
         Assertions.assertEquals(Gender.FEMALE, personList.get(0).getGender());
         Assertions.assertEquals(Gender.FEMALE, personList.get(1).getGender());

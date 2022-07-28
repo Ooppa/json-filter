@@ -23,12 +23,12 @@ public class PersonComparator implements Comparator<Person> {
     public int compare(Person o1, Person o2) {
         switch (fieldToCompare) {
             case FIRST_NAME:
-                if(o1.getFirstName().equals(o2.getFirstName())) { // If same first name, return order in last name order
+                if (o1.getFirstName().equals(o2.getFirstName())) { // If same first name, return order in last name order
                     return o1.getLastName().compareTo(o2.getLastName()) * orderMultiplier;
                 }
                 return o1.getFirstName().compareTo(o2.getFirstName()) * orderMultiplier;
             case LAST_NAME:
-                if(o1.getLastName().equals(o2.getLastName())) { // If same last name, return order in first name order
+                if (o1.getLastName().equals(o2.getLastName())) { // If same last name, return order in first name order
                     return o1.getFirstName().compareTo(o2.getFirstName()) * orderMultiplier;
                 }
                 return o1.getLastName().compareTo(o2.getLastName()) * orderMultiplier;
