@@ -1,5 +1,5 @@
 # json-filter
-Programming task example solution detailed in [this document](Person_filter.pdf).
+Programming task example solution detailed in [this document](https://github.com/Ooppa/json-filter/blob/main/Person_Filter.pdf).
 
 ## Usage
 
